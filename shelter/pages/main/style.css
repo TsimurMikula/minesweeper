@@ -1,0 +1,264 @@
+/* Fonts start */
+@font-face {
+    font-family: 'Arial';
+    src: url('assets/fonts/Arial-Black.woff2') format('woff2'),
+        url('assets/fonts/Arial-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('assets/fonts/Arial-BoldItalicMT.woff2') format('woff2'),
+        url('assets/fonts/Arial-BoldItalicMT.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('assets/fonts/Arial-BoldMT.woff2') format('woff2'),
+        url('assets/fonts/Arial-BoldMT.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('assets/fonts/ArialNarrow.woff2') format('woff2'),
+        url('assets/fonts/ArialNarrow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('assets/fonts/Arial-ItalicMT.woff2') format('woff2'),
+        url('assets/fonts/Arial-ItalicMT.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('assets/fonts/ArialNarrow-Bold.woff2') format('woff2'),
+        url('assets/fonts/ArialNarrow-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('assets/fonts/ArialNarrow-BoldItalic.woff2') format('woff2'),
+        url('assets/fonts/ArialNarrow-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('assets/fonts/ArialNarrow-Italic.woff2') format('woff2'),
+        url('assets/fonts/ArialNarrow-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('assets/fonts/ArialMT.woff2') format('woff2'),
+        url('assets/fonts/ArialMT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('assets/fonts/Georgia-Bold.woff2') format('woff2'),
+        url('assets/fonts/Georgia-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('assets/fonts/Georgia-BoldItalic.woff2') format('woff2'),
+        url('assets/fonts/Georgia-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('assets/fonts/Georgia-Italic.woff2') format('woff2'),
+        url('assets/fonts/Georgia-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('assets/fonts/Georgia.woff2') format('woff2'),
+        url('assets/fonts/Georgia.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* Fonts end */
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #545454;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styles start */
+.header {
+    position: absolute;
+    height: 60px;
+    left: calc(50% - 1200px/2);
+    top: 60px;
+}
+.header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.header-logo {
+    max-width: 186px;
+    max-height: 60px;
+}
+
+.header-logo__link {
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.header-logo__title {
+    font-size: 32px;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.header-logo__subtitle {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.header-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.header-item {
+    margin-right: 35px;    
+}
+.header-item:last-child {
+    margin-right: 0;
+}
+
+.header-item__link{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    color: #CDCDCD;
+    text-decoration: none;
+}
+/* Header styles end */
+
+/* Notonly styles start */
+.notonly {
+    background: url(../main/img/start-screen-background.jpg) no-repeat center;
+    background: url(../main/img/start-screen-gradient-background.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.notonly-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 908px;
+}
+
+.notonly-content {
+    margin-top: 50px;
+}
+
+.notonly-content__title {
+    font-weight: 400;
+    max-width: 310px;
+    font-size: 44px;
+    line-height: 57px;
+    color: #FFFFFF;
+}
+
+.notonly-content__subtitle {
+    max-width: 460px;
+    font-family: 'Arial';
+    color: #CDCDCD;
+    margin-top: 42px;
+}
+
+.notonly-content__button {
+    width: 207px;
+    height: 52px;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    border: 1px solid #F1CDB3;
+    transition: 0.4s;    
+    cursor: pointer;
+    margin-top: 26px;
+}
+
+.notonly-img {
+    margin-top: 160px;
+    width: 698px;
+    height: 728px;
+}
+/* Notonly styles end */
