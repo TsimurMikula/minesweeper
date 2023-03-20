@@ -82,6 +82,23 @@
 
 @font-face {
     font-family: 'Georgia';
+    src: url('assets/fonts/Georgia-Italic.woff2') format('woff2'),
+        url('assets/fonts/Georgia-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('assets/fonts/Georgia.woff2') format('woff2'),
+        url('assets/fonts/Georgia.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Georgia';
     src: url('assets/fonts/Georgia-Bold.woff2') format('woff2'),
         url('assets/fonts/Georgia-Bold.woff') format('woff');
     font-weight: bold;
@@ -98,23 +115,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Georgia';
-    src: url('assets/fonts/Georgia-Italic.woff2') format('woff2'),
-        url('assets/fonts/Georgia-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Georgia';
-    src: url('assets/fonts/Georgia.woff2') format('woff2'),
-        url('assets/fonts/Georgia.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 /* Fonts end */
 
 html {
@@ -209,8 +209,8 @@ img {
 
 /* Notonly styles start */
 .notonly {
-    background: url(../main/img/start-screen-background.jpg) no-repeat center;
-    background: url(../main/img/start-screen-gradient-background.jpg) no-repeat center;
+    background: url(./assets/img/start-screen-background.jpg) no-repeat center;
+    background: url(./assets/img/start-screen-gradient-background.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -219,7 +219,7 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    height: 908px;
+    height: 900px;
 }
 
 .notonly-content {
@@ -257,8 +257,179 @@ img {
 }
 
 .notonly-img {
-    margin-top: 160px;
-    width: 698px;
-    height: 728px;
+    margin-top: 172px;
 }
 /* Notonly styles end */
+
+/* About styles start */
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 588px;
+}
+
+.about-img {
+    margin-top: 80px;
+    margin-right: 120px;
+}
+
+.about-content {
+    margin-top: 63px;
+}
+
+.about-content__title {
+    font-weight: 400;
+    max-width: 370px;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+
+}
+
+.about-content__subtitle {
+    max-width: 430px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    color: #4C4C4C;
+}
+/* About styles end */
+
+/* Ourfriends styles start */
+.ourfriends {
+    background: #F6F6F6;
+}
+
+.ourfriends-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 877px;
+}
+
+.ourfriends-title {
+    max-width: 400px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.ourfriends-slider {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.ourfriends-card {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    min-height: 435px;
+    background: #FAFAFA;
+    border-radius: 9px;
+    letter-spacing: 0.06em;
+    margin-right: 90px;
+}
+
+.ourfriends-card__name {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ourfriends-card__button {
+    width: 187px;
+    height: 52px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    background-color: #FAFAFA;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    margin-top: 12px;
+    margin-left: 42px;
+}
+
+.ourfriends-arrow-left {
+    position: relative;
+    top: 192px;
+    left: 0;
+    margin-right: 53px;
+}
+
+.ourfriends-arrow-right {
+    position: relative;
+    top: -242px;
+    left: 1148px;
+}
+
+.ourfriends-button {
+    width: 261px;
+    height: 52px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    background-color: #F1CDB3;
+    border: 1px solid #F1CDB3;
+    border-radius: 100px;
+    margin-bottom: 100px;
+}
+/* Ourfriends styles end */
+
+/* Help styles start */
+.help-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 611px;
+}
+
+.help-title {
+    max-width: 310px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-top: 80px;
+}
+
+.help-content {
+    width: 1026px;
+    height: 281px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 68px;
+    gap: 60px;
+
+}
+
+.help-item {
+    text-align: center;
+   
+}
+
+
+
+.help-item__title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+}
+/* Help styles end */
