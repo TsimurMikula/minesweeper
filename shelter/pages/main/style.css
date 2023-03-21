@@ -415,16 +415,12 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 68px;
-    gap: 60px;
-
+    gap: 38px 119px;
 }
 
 .help-item {
     text-align: center;
-   
 }
-
-
 
 .help-item__title {
     font-weight: 400;
@@ -433,3 +429,139 @@ img {
     letter-spacing: 0.06em;
 }
 /* Help styles end */
+
+/* Inaddition styles start */
+.inaddition {
+    background: #F6F6F6;
+}
+
+.inaddition-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 30px;
+    height: 462px;
+}
+
+.inaddition-img {
+    margin-top: 91px;
+}
+
+.inaddition-content {
+    max-width: 380px;
+    height: 282px;
+    margin-top: 50px;
+}
+
+.inaddition-title {
+    max-width: 300px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+}
+
+.inaddition-subtitle {
+    max-width: 308px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    margin-top: -8px;
+}
+
+.inaddition-card {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 14px;
+    width: 349px;
+    height: 43px;
+    background: #F1CDB3;
+    border-radius: 9px;
+    margin-top: 19px;
+}
+
+.inaddition-card__number {
+    width: 275px;
+    height: 23px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+}
+
+.inaddition-description {
+    max-width: 380px;
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #B2B2B2;
+    margin-top: 20px;
+}
+/* Inaddition styles end */
+
+/* Footer styles start */
+.footer {
+    background: url(./assets/img/footer-background.jpg) no-repeat center;
+    background: url(./assets/img/footer-gradient-background.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 350px;
+}
+
+.footer-contacts {
+    max-width: 280px;
+    margin-top: 28px;
+}
+
+.footer-locations {
+    width: 302px;
+    margin-top: 28px;
+}
+
+.footer-title-1 {
+    max-width: 280px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.footer-title-2 {
+    max-width: 280px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.footer-mail, .footer-phone, .footer-boston, .footer-london {
+    display: inline-flex;
+    gap: 0 19px;
+    width: 302px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.footer-london {
+    margin-top: -10px;
+}
+
+.footer-img {
+    margin-top: 40px;
+}
+/* Footer styles end */
