@@ -150,7 +150,7 @@ img {
     position: absolute;
     height: 60px;
     left: calc(50% - 1200px/2);
-    top: 60px;
+    top: 30px;
 }
 .header-wrapper {
     display: flex;
@@ -163,9 +163,12 @@ img {
 .header-logo {
     max-width: 186px;
     max-height: 60px;
+    cursor: pointer;
 }
 
 .header-logo__link {
+    max-width: 186px;
+    max-height: 60px;
     line-height: 30px;
     text-decoration: none;
 }
@@ -183,12 +186,15 @@ img {
     font-size: 13px;
     letter-spacing: 0.1em;
     color: #FFFFFF;
+    margin-left: 4px; 
 }
 
 .header-list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    margin-top: 12px;
+    margin-right: 3px;
 }
 
 .header-item {
@@ -204,6 +210,22 @@ img {
     font-weight: 400;
     color: #CDCDCD;
     text-decoration: none;
+}
+
+.header-item__link-active {
+    color: #FAFAFA;
+    border-bottom: 3px #F1CDB3 solid;
+    cursor: default;
+    padding-bottom: 3px;
+}
+
+.header-item__link:hover {
+    color: #FAFAFA;
+    transition: 0.5s; 
+}
+
+.header-item__link:active {
+    border-bottom: 3px #F1CDB3 solid;
 }
 /* Header styles end */
 
@@ -250,10 +272,15 @@ img {
     color: #292929;
     background-color: #F1CDB3;
     border-radius: 100px;
-    border: 1px solid #F1CDB3;
-    transition: 0.4s;    
-    cursor: pointer;
+    border: 1px solid #F1CDB3;   
     margin-top: 26px;
+}
+
+.notonly-content__button:hover {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    border: 1px solid #FDDCC4;
+    transition: 0.5s; 
 }
 
 .notonly-img {
@@ -335,6 +362,17 @@ img {
     margin-right: 90px;
 }
 
+.ourfriends-card:hover {
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: 0.5s; 
+}
+
+.ourfriends-card:hover .ourfriends-card__button {
+    background-color: #F1CDB3;
+    transition: 0.5s; 
+}
+
 .ourfriends-card__name {
     font-weight: 400;
     font-size: 20px;
@@ -358,6 +396,7 @@ img {
     border-radius: 100px;
     margin-top: 12px;
     margin-left: 42px;
+    cursor: pointer;
 }
 
 .ourfriends-arrow-left {
@@ -367,10 +406,33 @@ img {
     margin-right: 53px;
 }
 
+.ourfriends-arrow-left__active {
+    display: none;
+}
+
+.ourfriends-arrow-left:hover .ourfriends-arrow-left__active {
+    display: block;
+    position: relative;
+    top: -59px;
+    transition: 0.5s; 
+}
+
 .ourfriends-arrow-right {
     position: relative;
     top: -242px;
     left: 1148px;
+}
+
+.ourfriends-arrow-right__active {
+    display: none;
+    transform: rotateY(180deg);
+}
+
+.ourfriends-arrow-right:hover .ourfriends-arrow-right__active {
+    display: block;
+    position: relative;
+    top: -59px;
+    transition: 0.5s; 
 }
 
 .ourfriends-button {
@@ -387,6 +449,13 @@ img {
     border: 1px solid #F1CDB3;
     border-radius: 100px;
     margin-bottom: 100px;
+}
+
+.ourfriends-button:hover {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    border: 1px solid #FDDCC4;
+    transition: 0.5s; 
 }
 /* Ourfriends styles end */
 
@@ -481,6 +550,12 @@ img {
     margin-top: 19px;
 }
 
+.inaddition-card:hover {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    transition: 0.5s; 
+}
+
 .inaddition-card__number {
     width: 275px;
     height: 23px;
@@ -488,6 +563,8 @@ img {
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 0.06em;
+    color: #545454;
+    text-decoration: none;
 }
 
 .inaddition-description {
@@ -546,7 +623,7 @@ img {
     margin-bottom: 12px;
 }
 
-.footer-mail, .footer-phone, .footer-boston, .footer-london {
+.footer-link {
     display: inline-flex;
     gap: 0 19px;
     width: 302px;
@@ -555,6 +632,13 @@ img {
     line-height: 23px;
     letter-spacing: 0.06em;
     color: #F1CDB3;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    cursor: pointer;
+    color: #FAFAFA;
+    transition: 0.5s; 
 }
 
 .footer-london {

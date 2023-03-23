@@ -196,6 +196,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    margin-right: 3px;
 }
 
 .header-item {
@@ -215,16 +216,18 @@ img {
 }
 
 .header-item__link-active {
-    text-decoration: 2px underline #F1CDB3;
+    border-bottom: 3px #F1CDB3 solid;
     cursor: default;
+    padding-bottom: 4px;
 }
 
 .header-item__link:hover {
     color: #292929;
+    transition: 0.5s; 
 }
 
 .header-item__link:active {
-    text-decoration: 2px underline #F1CDB3;
+    border-bottom: 3px #F1CDB3 solid;
 }
 /* Header styles end */
 
@@ -269,6 +272,17 @@ img {
     letter-spacing: 0.06em;
 }
 
+.ourfriends-card:hover {
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: 0.5s; 
+}
+
+.ourfriends-card:hover .ourfriends-card__button {
+    background-color: #F1CDB3;
+    transition: 0.5s; 
+}
+
 .ourfriends-card__name {
     font-weight: 400;
     font-size: 20px;
@@ -292,12 +306,14 @@ img {
     border-radius: 100px;
     margin-top: 12px;
     margin-left: 42px;
+    cursor: pointer;
 }
 
 .ourfriends-buttons {
     display: flex;
     gap: 0 20px;
     margin-bottom: 100px;
+    cursor: pointer;
 }
 /* Ourfriends styles end */
 
@@ -345,7 +361,7 @@ img {
     margin-bottom: 12px;
 }
 
-.footer-mail, .footer-phone, .footer-boston, .footer-london {
+.footer-link {
     display: inline-flex;
     gap: 0 19px;
     width: 302px;
@@ -354,6 +370,13 @@ img {
     line-height: 23px;
     letter-spacing: 0.06em;
     color: #F1CDB3;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    cursor: pointer;
+    color: #FAFAFA;
+    transition: 0.5s; 
 }
 
 .footer-london {

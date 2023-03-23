@@ -14,7 +14,7 @@
     <div class="wrapper">
       <div class="header-wrapper">
         <div class="header-logo">
-          <a href="" class="header-logo__link">
+          <a href="##" class="header-logo__link">
             <span class="header-logo__title">Cozy House</span> 
             <span class="header-logo__subtitle">Shelter for pets in Boston</span> 
           </a>
@@ -22,16 +22,16 @@
         <nav class="header-nav">
           <ul class="header-list">
             <li class="header-item">
-              <a href="#AboutShelter" class="header-item__link">About the shelter</a>
+              <a href="#aboutShelter" class="header-item__link header-item__link-active">About the shelter</a>
             </li>
             <li class="header-item">
-              <a href="#OurPets" class="header-item__link">Our pets</a>
+              <a href="/shelter/pages/pets/index.html" class="header-item__link">Our pets</a>
             </li>
             <li class="header-item">
-              <a href="#HelpShelter" class="header-item__link">Help the shelter</a>
+              <a href="#helpShelter" class="header-item__link">Help the shelter</a>
             </li>
             <li class="header-item">
-              <a href="#Contacts" class="header-item__link">Contacts</a>
+              <a href="#contacts" class="header-item__link">Contacts</a>
             </li>
           </ul>
         </nav>  
@@ -51,7 +51,9 @@
             <p class="notonly-content__subtitle">
                 We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!
             </p>
-            <button type="submit" class="notonly-content__button">Make a friend</button>
+            <a href="#ourfriends">
+              <button type="submit" class="notonly-content__button">Make a friend</button>
+            </a>
           </div>
           <div class="notonly-img">
             <img src="./assets/img/svg/start-screen-puppy.svg" alt="dog" class="notonly-img__dog">
@@ -81,39 +83,43 @@
     </section>
     <!--About end-->
     <!--Ourfriends start-->
-    <section class="ourfriends">
+    <section class="ourfriends" id="ourfriends">
       <div class="wrapper">
         <div class="ourfriends-wrapper">
           <h2 class="ourfriends-title">Our friends who <br> are looking for a house</h2>
           <div class="ourfriends-slider">
             <div class="ourfriends-arrow-left">
-              <img src="./assets/img/svg/button-arrow-left.svg" alt="arrow">
+              <img src="./assets/img/svg/button-arrow-left.svg" alt="arrow" class="ourfriends-arrow-left__inactive">
+              <img src="./assets/img/svg/button-arrow-left-hover.svg" alt="arrow" class="ourfriends-arrow-left__active">
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-katrine.svg" alt="katrine" class="ourfriends-card__img">
+              <img src="./assets/img/katrine.png" alt="katrine" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Katrine</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-jennifer.svg" alt="jennifer" class="ourfriends-card__img">
+              <img src="./assets/img/jennifer.png" alt="jennifer" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Jennifer</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-woody.svg" alt="woody" class="ourfriends-card__img">
+              <img src="./assets/img/woody.png" alt="woody" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Woody</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-arrow-right">
-              <img src="./assets/img/svg/button-arrow-right.svg" alt="arrow">
+              <img src="./assets/img/svg/button-arrow-right.svg" alt="arrow" class="ourfriends-arrow-right__inactive">
+              <img src="./assets/img/svg/button-arrow-left-hover.svg" alt="arrow" class="ourfriends-arrow-right__active">
             </div>
           </div>  
-          <button class="ourfriends-button">Get to know the rest</button>
+          <a href="/shelter/pages/pets/index.html">
+            <button class="ourfriends-button">Get to know the rest</button>
+          </a>
       </div>
     </section>
     <!--Ourfriends end-->
     <!--Help start-->
-    <section class="help">
+    <section class="help" id="helpShelter">
       <div class="wrapper">
         <div class="help-wrapper">
           <h2 class="help-title">How you can help our shelter</h2>
@@ -171,7 +177,7 @@
             <p class="inaddition-subtitle">Name of the bank / Type of bank account</p>
             <div class="inaddition-card">
               <img src="./assets/img/svg/credit-card.svg" alt="card" class="inaddition-card__img">
-              <p class="inaddition-card__number">8380 2880 8028 8791 7435</p>
+              <a href="##" class="inaddition-card__number">8380 2880 8028 8791 7435</a>
             </div>
             <p class="inaddition-description">
               Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.
@@ -185,29 +191,37 @@
   <!--Main end--> 
   
   <!--Footer start-->
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="wrapper">
       <div class="footer-wrapper">
         <div class="footer-contacts">
           <h2 class="footer-title-1">For questions and suggestions</h2>
           <div class="footer-mail">
-            <img src="./assets/img/svg/icon-email.svg" alt="mail" class="footer-mail__img">
-            <p class="footer-mail__adress">email@shelter.com</p>
+            <a href="mailto:email@shelter.com" class="footer-link">
+              <img src="./assets/img/svg/icon-email.svg" alt="mail" class="footer-link__img">
+              <p class="footer-link__adress">email@shelter.com</p>
+            </a>
           </div>
           <div class="footer-phone">
-            <img src="./assets/img/svg/icon-phone.svg" alt="phone" class="footer-phone__img">
-            <p class="footer-phone__number">+13 674 567 75 54</p>
+            <a href="tel:+136745677554" class="footer-link">
+              <img src="./assets/img/svg/icon-phone.svg" alt="phone" class="footer-link__img">
+              <p class="footer-link__number">+13 674 567 75 54</p>
+            </a>
           </div>
         </div>
         <div class="footer-locations">
           <h2 class="footer-title-2">We are waiting for your visit</h2>
           <div class="footer-boston">
-            <img src="./assets/img/svg/icon-marker.svg" alt="boston" class="footer-boston__img">
-            <p class="footer-boston__adress">1 Central Street, Boston (entrance from the store)</p>
+            <a href="https://goo.gl/maps/WdtzwUMJVCQEWdow7" target="_blank" class="footer-link">
+              <img src="./assets/img/svg/icon-marker.svg" alt="boston" class="footer-link__img">
+              <p class="footer-link__adress">1 Central Street, Boston (entrance from the store)</p>
+            </a>
           </div>
           <div class="footer-london">
-            <img src="./assets/img/svg/icon-marker.svg" alt="phone" class="footer-london__img">
-            <p class="footer-london__adress">18 South Park, London </p>
+            <a href="https://goo.gl/maps/WBHYU8cz5xaHUDe89" target="_blank" class="footer-link">
+              <img src="./assets/img/svg/icon-marker.svg" alt="phone" class="footer-link__img">
+              <p class="footer-link__adress">18 South Park, London</p>
+          </a>
           </div>
         </div>
         <div class="footer-img">

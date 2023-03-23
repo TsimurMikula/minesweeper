@@ -14,7 +14,7 @@
     <div class="wrapper">
       <div class="header-wrapper">
         <div class="header-logo">
-          <a href="" class="header-logo__link">
+          <a href="/shelter/pages/main/index.html" class="header-logo__link">
             <span class="header-logo__title">Cozy House</span> 
             <span class="header-logo__subtitle">Shelter for pets in Boston</span> 
           </a>
@@ -22,16 +22,16 @@
         <nav class="header-nav">
           <ul class="header-list">
             <li class="header-item">
-              <a href="#AboutShelter" class="header-item__link">About the shelter</a>
+              <a href="/shelter/pages/main/index.html" class="header-item__link">About the shelter</a>
             </li>
             <li class="header-item">
               <a href="#OurPets" class="header-item__link header-item__link-active">Our pets</a>
             </li>
             <li class="header-item">
-              <a href="#HelpShelter" class="header-item__link">Help the shelter</a>
+              <a href="/shelter/pages/main/index.html#helpShelter" class="header-item__link">Help the shelter</a>
             </li>
             <li class="header-item">
-              <a href="#Contacts" class="header-item__link">Contacts</a>
+              <a href="#contacts" class="header-item__link">Contacts</a>
             </li>
           </ul>
         </nav>   
@@ -49,42 +49,42 @@
           <h2 class="ourfriends-title">Our friends who <br> are looking for a house</h2>
           <div class="ourfriends-slider">
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-katrine.svg" alt="katrine" class="ourfriends-card__img">
+              <img src="./assets/img/katrine.png" alt="katrine" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Katrine</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-jennifer.svg" alt="jennifer" class="ourfriends-card__img">
+              <img src="./assets/img/jennifer.png" alt="jennifer" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Jennifer</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-woody.svg" alt="woody" class="ourfriends-card__img">
+              <img src="./assets/img/woody.png" alt="woody" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Woody</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-sophia.svg" alt="sophia" class="ourfriends-card__img">
+              <img src="./assets/img/sophia.png" alt="sophia" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Sophia</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-timmy.svg" alt="timmy" class="ourfriends-card__img">
+              <img src="./assets/img/timmy.png" alt="timmy" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Timmy</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-charly.svg" alt="charly" class="ourfriends-card__img">
+              <img src="./assets/img/charly.png" alt="charly" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Charly</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-scarlet.svg" alt="scarlett" class="ourfriends-card__img">
+              <img src="./assets/img/scarlett.png" alt="scarlett" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Scarlett</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
             <div class="ourfriends-card">
-              <img src="./assets/img/svg/pets-freddie.svg" alt="freddie" class="ourfriends-card__img">
+              <img src="./assets/img/freddie.png" alt="freddie" class="ourfriends-card__img">
               <h3 class="ourfriends-card__name">Freddie</h3>
               <button class="ourfriends-card__button">Learn more</button>
             </div>
@@ -103,29 +103,37 @@
   <!--Main end--> 
   
   <!--Footer start-->
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="wrapper">
       <div class="footer-wrapper">
         <div class="footer-contacts">
           <h2 class="footer-title-1">For questions and suggestions</h2>
           <div class="footer-mail">
-            <img src="./assets/img/svg/icon-email.svg" alt="mail" class="footer-mail__img">
-            <p class="footer-mail__adress">email@shelter.com</p>
+            <a href="mailto:email@shelter.com" class="footer-link">
+              <img src="./assets/img/svg/icon-email.svg" alt="mail" class="footer-link__img">
+              <p class="footer-link__adress">email@shelter.com</p>
+            </a>
           </div>
           <div class="footer-phone">
-            <img src="./assets/img/svg/icon-phone.svg" alt="phone" class="footer-phone__img">
-            <p class="footer-phone__number">+13 674 567 75 54</p>
+            <a href="tel:+136745677554" class="footer-link">
+              <img src="./assets/img/svg/icon-phone.svg" alt="phone" class="footer-link__img">
+              <p class="footer-link__number">+13 674 567 75 54</p>
+            </a>
           </div>
         </div>
         <div class="footer-locations">
           <h2 class="footer-title-2">We are waiting for your visit</h2>
           <div class="footer-boston">
-            <img src="./assets/img/svg/icon-marker.svg" alt="boston" class="footer-boston__img">
-            <p class="footer-boston__adress">1 Central Street, Boston (entrance from the store)</p>
+            <a href="https://goo.gl/maps/WdtzwUMJVCQEWdow7" target="_blank" class="footer-link">
+              <img src="./assets/img/svg/icon-marker.svg" alt="boston" class="footer-link__img">
+              <p class="footer-link__adress">1 Central Street, Boston (entrance from the store)</p>
+            </a>
           </div>
           <div class="footer-london">
-            <img src="./assets/img/svg/icon-marker.svg" alt="phone" class="footer-london__img">
-            <p class="footer-london__adress">18 South Park, London </p>
+            <a href="https://goo.gl/maps/WBHYU8cz5xaHUDe89" target="_blank" class="footer-link">
+              <img src="./assets/img/svg/icon-marker.svg" alt="phone" class="footer-link__img">
+              <p class="footer-link__adress">18 South Park, London</p>
+          </a>
           </div>
         </div>
         <div class="footer-img">
