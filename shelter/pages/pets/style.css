@@ -223,7 +223,7 @@ img {
 
 .header-item__link:hover {
     color: #292929;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
 
 .header-item__link:active {
@@ -275,12 +275,12 @@ img {
 .ourfriends-card:hover {
     background: #FFFFFF;
     cursor: pointer;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
 
 .ourfriends-card:hover .ourfriends-card__button {
     background-color: #F1CDB3;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
 
 .ourfriends-card__name {
@@ -315,6 +315,32 @@ img {
     margin-bottom: 100px;
     cursor: pointer;
 }
+
+.ourfriends-button-current {
+    width: 52px;
+    height: 52px;
+}
+
+.ourfriends-button-current__hover {
+    display: none;
+}
+
+.ourfriends-button-current:hover .ourfriends-button-current__hover {
+    display: block;
+    position: relative;
+    top: -59.5px;
+    animation: arrow 0.5s forwards;
+    cursor: pointer;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
 /* Ourfriends styles end */
 
 /* Footer styles start */
@@ -376,7 +402,7 @@ img {
 .footer-link:hover {
     cursor: pointer;
     color: #FAFAFA;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
 
 .footer-london {

@@ -221,7 +221,7 @@ img {
 
 .header-item__link:hover {
     color: #FAFAFA;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
 
 .header-item__link:active {
@@ -280,7 +280,7 @@ img {
     cursor: pointer;
     background-color: #FDDCC4;
     border: 1px solid #FDDCC4;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
 
 .notonly-img {
@@ -348,7 +348,7 @@ img {
 .ourfriends-slider {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 .ourfriends-card {
@@ -365,12 +365,12 @@ img {
 .ourfriends-card:hover {
     background: #FFFFFF;
     cursor: pointer;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
 
 .ourfriends-card:hover .ourfriends-card__button {
     background-color: #F1CDB3;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
 
 .ourfriends-card__name {
@@ -403,6 +403,8 @@ img {
     position: relative;
     top: 192px;
     left: 0;
+    width: 52px;
+    height: 52px;
     margin-right: 53px;
 }
 
@@ -414,13 +416,16 @@ img {
     display: block;
     position: relative;
     top: -59px;
-    transition: 0.5s; 
+    animation: arrow 0.5s forwards;
+    cursor: pointer;
 }
 
 .ourfriends-arrow-right {
     position: relative;
-    top: -242px;
+    top: -246px;
     left: 1148px;
+    width: 52px;
+    height: 52px;
 }
 
 .ourfriends-arrow-right__active {
@@ -432,7 +437,8 @@ img {
     display: block;
     position: relative;
     top: -59px;
-    transition: 0.5s; 
+    animation: arrow 0.5s forwards;
+    cursor: pointer;
 }
 
 .ourfriends-button {
@@ -448,15 +454,24 @@ img {
     background-color: #F1CDB3;
     border: 1px solid #F1CDB3;
     border-radius: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 93px;
 }
 
 .ourfriends-button:hover {
     cursor: pointer;
     background-color: #FDDCC4;
     border: 1px solid #FDDCC4;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
 /* Ourfriends styles end */
 
 /* Help styles start */
@@ -553,7 +568,7 @@ img {
 .inaddition-card:hover {
     cursor: pointer;
     background-color: #FDDCC4;
-    transition: 0.5s; 
+    transition: all 0.5s linear;  
 }
 
 .inaddition-card__number {
@@ -638,7 +653,7 @@ img {
 .footer-link:hover {
     cursor: pointer;
     color: #FAFAFA;
-    transition: 0.5s; 
+    transition: all 0.5s linear; 
 }
 
 .footer-london {
