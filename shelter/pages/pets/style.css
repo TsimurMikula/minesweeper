@@ -229,6 +229,30 @@ img {
 .header-item__link:active {
     border-bottom: 3px #F1CDB3 solid;
 }
+
+.header-burger {
+    position: relative;
+    display: none;
+    width: 30px;
+    height: 22px;
+    top: -6px;
+}
+.header-burger__line {
+    display: block;
+    width: 100%;
+    border: 1.6px solid #000000;
+    position: absolute;
+    left: 0;
+}
+.burger-line__first {
+    top: 0;
+}
+.burger-line__second {
+    top: 50%;
+}
+.burger-line__third {
+    top: 100%;
+}
 /* Header styles end */
 
 /* Ourfriends styles start */
@@ -413,3 +437,99 @@ img {
     margin-top: 40px;
 }
 /* Footer styles end */
+
+/* Media start */
+
+@media screen and (max-width: 768px) {
+    
+    .wrapper {
+        max-width: 708px;
+    }
+
+    .ourfriends-wrapper {
+        max-height: 1733px;
+    }
+
+    .ourfriends-card-none {
+        display: none;
+    }
+
+    .ourfriends-slider {
+        justify-content: center;
+        gap: 29px 40px;
+        margin-bottom: 40px;
+    }
+
+    .ourfriends-title {
+        margin-bottom: 31px;
+    }
+
+    .footer-wrapper {
+        min-height: 639px;
+        justify-content: center;
+        gap: 0 60px;
+    }
+
+    .footer-img {
+        margin-top: 44px;
+    }
+
+    .footer-contacts {
+        margin-top: 0;
+    }
+    
+    .footer-locations {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    .wrapper {
+        max-width: 300px;
+    }
+
+    .header-wrapper {
+        margin: 0 10px;
+    }
+
+    .header-burger {
+        display: block;   
+    } 
+
+    .header-nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #EDF2EC;
+        z-index: 10;
+        padding: 75px;
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
+        -webkit-transition: .2s all linear;
+        -o-transition: .2s all linear;
+        transition: .2s all linear;
+    } 
+
+    .ourfriends-wrapper {
+        max-height: 1649px;
+    }
+
+    .ourfriends-title {
+        max-width: 300px;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 32px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top: 42px;
+        margin-bottom: 42px;
+    }
+    
+
+}
+
+/* Media end */
