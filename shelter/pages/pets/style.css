@@ -387,7 +387,7 @@ img {
 }
 
 .footer-locations {
-    width: 302px;
+    max-width: 302px;
     margin-top: 28px;
 }
 
@@ -412,9 +412,10 @@ img {
 }
 
 .footer-link {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: nowrap;
     gap: 0 19px;
-    width: 302px;
+    max-width: 302px;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
@@ -429,8 +430,12 @@ img {
     transition: all 0.5s linear; 
 }
 
+.footer-phone {
+    margin-top: 8px;
+}
+
 .footer-london {
-    margin-top: -10px;
+    margin-top: -2px;
 }
 
 .footer-img {
@@ -440,7 +445,7 @@ img {
 
 /* Media start */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 321px) and (max-width: 768px) {
     
     .wrapper {
         max-width: 708px;
@@ -450,7 +455,7 @@ img {
         max-height: 1733px;
     }
 
-    .ourfriends-card-none {
+    .ourfriends-card:nth-last-child(-n+2) {
         display: none;
     }
 
@@ -464,6 +469,12 @@ img {
         margin-bottom: 31px;
     }
 
+    .footer {
+        background: url(./assets/img/footer-background-tablet.jpg) no-repeat center;
+        background: url(./assets/img/footer-gradient-background-tablet.jpg) no-repeat center;
+        background-size: cover;
+    }
+
     .footer-wrapper {
         min-height: 639px;
         justify-content: center;
@@ -471,7 +482,7 @@ img {
     }
 
     .footer-img {
-        margin-top: 44px;
+        margin-top: 50px;
     }
 
     .footer-contacts {
@@ -528,8 +539,70 @@ img {
         margin-top: 42px;
         margin-bottom: 42px;
     }
-    
 
+    .ourfriends-slider {
+        justify-content: center;
+        margin-bottom: 44px;
+    }
+    
+    .ourfriends-card:nth-last-child(-n+5) {
+        display: none;
+    }
+
+    .ourfriends-buttons {
+        gap: 0 10px;
+    }
+
+    .footer {
+        background: url(./assets/img/footer-background-mobile.jpg) no-repeat center;
+        background: url(./assets/img/footer-gradient-background-mobile.jpg) no-repeat center;
+        background-size: cover;
+    }
+    
+    .footer-wrapper {
+        min-height: 809px;
+        justify-content: center;
+    }
+
+    .footer-contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-title-1 {
+        font-size: 25px;
+        line-height: 32px;
+        text-align: center;
+        margin-top: 2px;
+    }
+
+    .footer-locations {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+        margin-top: 4px;
+    }
+    
+    .footer-title-2 {
+        max-width: 270px;
+        font-size: 25px;
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-london {
+        margin-top: 5px;
+        padding-right: 28px;
+    }
+
+    .footer-img {
+        width: 260px;
+        height: 269px;
+        margin-top: 26px;
+    }
 }
 
 /* Media end */
