@@ -332,7 +332,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 877px;
+    min-height: 877px;
 }
 
 .ourfriends-title {
@@ -348,18 +348,22 @@ img {
 .ourfriends-slider {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 24px;
+    margin-top: -30px;
 }
 
 .ourfriends-card {
     display: flex;
     flex-direction: column;
     width: 270px;
-    min-height: 435px;
+    height: 435px;
     background: #FAFAFA;
     border-radius: 9px;
     letter-spacing: 0.06em;
     margin-right: 90px;
+}
+
+.ourfriends-card:nth-last-child(-n+2) {
+    margin-right: 53px;
 }
 
 .ourfriends-card:hover {
@@ -400,12 +404,10 @@ img {
 }
 
 .ourfriends-arrow-left {
-    position: relative;
-    top: 192px;
-    left: 0;
     width: 52px;
     height: 52px;
     margin-right: 53px;
+    margin-top: 192px;
 }
 
 .ourfriends-arrow-left__active {
@@ -421,11 +423,9 @@ img {
 }
 
 .ourfriends-arrow-right {
-    position: relative;
-    top: -246px;
-    left: 1148px;
     width: 52px;
     height: 52px;
+    margin-top: 192px;
 }
 
 .ourfriends-arrow-right__active {
@@ -454,7 +454,7 @@ img {
     background-color: #F1CDB3;
     border: 1px solid #F1CDB3;
     border-radius: 100px;
-    margin-bottom: 93px;
+    margin-bottom: 40px;
     padding: 15px 43px;
 }
 
@@ -727,31 +727,63 @@ img {
         margin-top: 0px;
         margin-right: 0px;
     }
+    
+    .ourfriends-title {
+        margin-bottom: 28px;
+    }
 
-    .ourfriends-wrapper {
-        max-height: 1733px;
+    .ourfriends-slider {
+        justify-content: space-between;
+        margin-bottom: 0px;
+    }
+
+    .ourfriends-card {
+        margin-right: 40px;
     }
 
     .ourfriends-card:nth-last-child(-n+2) {
         display: none;
     }
-
-    .ourfriends-slider {
-        justify-content: center;
-        gap: 29px 40px;
-        margin-bottom: 40px;
+    .ourfriends-card:nth-last-child(-n+3) {
+        margin-right: 12px;
     }
 
-    .ourfriends-title {
-        margin-bottom: 31px;
+    .ourfriends-arrow-left {        
+        margin-right: 12px;
     }
 
-    .ourfriends-arrow-right {
-        position: relative;
-        top: -246px;
-        left: 8px;
-        width: 52px;
-        height: 52px;
+    .help-wrapper {
+        min-height: 779px;
+    }
+
+    .help-content {
+        max-width: 630px;
+        max-height: 449px;
+        justify-content: space-between;
+        margin-bottom: 239px;
+        gap: 56px 0px;
+    }
+
+    .help-item {
+        width: 170px;
+        height: 113px;
+    }
+
+    .inaddition-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0 30px;
+        min-height: 783px;
+    }
+
+    .inaddition-img {
+        margin-top: 88px;
+    }
+    
+    .inaddition-content {
+        max-width: 380px;
+        height: 282px;
+        margin-top: -42px;
     }
 
     .footer {
