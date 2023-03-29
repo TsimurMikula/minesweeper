@@ -200,6 +200,11 @@ img {
 .header-item {
     margin-right: 35px;    
 }
+
+.header-item-inactive {
+    pointer-events: none;
+}
+
 .header-item:last-child {
     margin-right: 0;
 }
@@ -298,7 +303,7 @@ img {
     line-height: 22px;
     letter-spacing: 0.06em;
     color: #292929;
-    padding: 15px 44px;
+    padding: 15px 0 15px 44px;
     background-color: #F1CDB3;
     border-radius: 100px;
     border: 1px solid #F1CDB3;   
@@ -397,6 +402,9 @@ img {
 .ourfriends-card:nth-last-child(-n+2) {
     margin-right: 53px;
 }
+.ourfriends-card:nth-last-child(4) {
+    margin-left: 53px;
+}
 
 .ourfriends-card:hover {
     background: #FFFFFF;
@@ -435,42 +443,18 @@ img {
     cursor: pointer;
 }
 
-.ourfriends-arrow-left {
-    width: 52px;
-    height: 52px;
-    margin-right: 53px;
-    margin-top: 192px;
-}
-
-.ourfriends-arrow-left__active {
-    display: none;
-}
-
-.ourfriends-arrow-left:hover .ourfriends-arrow-left__active {
-    display: block;
-    position: relative;
-    top: -59px;
-    animation: arrow 0.5s forwards;
-    cursor: pointer;
-}
-
-.ourfriends-arrow-right {
+.ourfriends-arrow {
     width: 52px;
     height: 52px;
     margin-top: 192px;
 }
 
-.ourfriends-arrow-right__active {
-    display: none;
-    transform: rotateY(180deg);
-}
-
-.ourfriends-arrow-right:hover .ourfriends-arrow-right__active {
-    display: block;
-    position: relative;
-    top: -59px;
-    animation: arrow 0.5s forwards;
+.ourfriends-arrow:hover{
+    background: #FDDCC4;
+    border-radius: 100px;
+    border-color: #FDDCC4;
     cursor: pointer;
+    transition: all 0.5s linear;
 }
 
 .ourfriends-button {
@@ -497,14 +481,6 @@ img {
     transition: all 0.5s linear; 
 }
 
-@keyframes arrow {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-  }
 /* Ourfriends styles end */
 
 /* Help styles start */
@@ -707,7 +683,7 @@ img {
 
 /* Media start */
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1279px)  {
     
     .wrapper {
         max-width: 708px;
@@ -786,8 +762,8 @@ img {
         margin-right: 12px;
     }
 
-    .ourfriends-arrow-left {        
-        margin-right: 12px;
+    .ourfriends-card:nth-last-child(4) {
+        margin-left: 12px;
     }
 
     .help-wrapper {
@@ -849,7 +825,7 @@ img {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
     
     .wrapper {
         max-width: 300px;
@@ -909,7 +885,9 @@ img {
         letter-spacing: 0.06em;
     }
     
+    
     .notonly-content__button {
+        padding: 15px 44px;
         margin-top: 0px;
     }
 
@@ -973,21 +951,15 @@ img {
 
     .ourfriends-card {
         order: -1;
-        margin-right: 0px;
+        margin-right: 50px;
     }
 
     .ourfriends-card:nth-last-child(-n+3) {
         display: none;
-        margin-right: 0px;
     }
 
-    .ourfriends-arrow-left {
+    .ourfriends-arrow {
         margin-top: 0px;        
-        margin-right: 0px;
-    }
-
-    .ourfriends-arrow-right {
-        margin-top: 0px;
     }
 
     .ourfriends-button {

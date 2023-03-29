@@ -203,6 +203,10 @@ img {
     margin-right: 35px;    
 }
 
+.header-item-inactive {
+    pointer-events: none;
+}
+
 .header-item:last-child {
     margin-right: 0;
 }
@@ -336,13 +340,20 @@ img {
 .ourfriends-buttons {
     display: flex;
     gap: 0 20px;
-    margin-bottom: 90px;
-    cursor: pointer;
+    margin-bottom: 100px;
 }
 
-.ourfriends-button-current {
+.ourfriends-button {
     width: 52px;
     height: 52px;
+}
+
+.ourfriends-button:nth-last-child(-n + 3):hover {
+    background: #FDDCC4;
+    border-radius: 100px;
+    border-color: #FDDCC4;
+    cursor: pointer;
+    transition: all 0.5s linear; 
 }
 
 .ourfriends-button-current__hover {
@@ -445,7 +456,7 @@ img {
 
 /* Media start */
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
     
     .wrapper {
         max-width: 708px;
@@ -494,7 +505,7 @@ img {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
     
     .wrapper {
         max-width: 300px;
