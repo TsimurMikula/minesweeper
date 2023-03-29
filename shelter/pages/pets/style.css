@@ -203,6 +203,10 @@ img {
     margin-right: 35px;    
 }
 
+.header-item-inactive {
+    pointer-events: none;
+}
+
 .header-item:last-child {
     margin-right: 0;
 }
@@ -312,13 +316,20 @@ img {
 .ourfriends-buttons {
     display: flex;
     gap: 0 20px;
-    margin-bottom: 90px;
-    cursor: pointer;
+    margin-bottom: 100px;
 }
 
-.ourfriends-button-current {
+.ourfriends-button {
     width: 52px;
     height: 52px;
+}
+
+.ourfriends-button:nth-last-child(-n + 3):hover {
+    background: #FDDCC4;
+    border-radius: 100px;
+    border-color: #FDDCC4;
+    cursor: pointer;
+    transition: all 0.5s linear; 
 }
 
 .ourfriends-button-current__hover {
