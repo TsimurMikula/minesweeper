@@ -224,11 +224,6 @@ img {
     padding-bottom: 3px;
 }
 
-.header-item__link:hover {
-    color: #FAFAFA;
-    transition: all 0.5s linear; 
-}
-
 .header-item__link:active {
     border-bottom: 3px #F1CDB3 solid;
 }
@@ -308,13 +303,6 @@ img {
     border-radius: 100px;
     border: 1px solid #F1CDB3;   
     margin-top: 28px;
-}
-
-.notonly-content__button:hover {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    border: 1px solid #FDDCC4;
-    transition: all 0.5s linear; 
 }
 
 .notonly-img {
@@ -406,17 +394,6 @@ img {
     margin-left: 53px;
 }
 
-.ourfriends-card:hover {
-    background: #FFFFFF;
-    cursor: pointer;
-    transition: all 0.5s linear; 
-}
-
-.ourfriends-card:hover .ourfriends-card__button {
-    background-color: #F1CDB3;
-    transition: all 0.5s linear; 
-}
-
 .ourfriends-card__name {
     font-weight: 400;
     font-size: 20px;
@@ -449,14 +426,6 @@ img {
     margin-top: 192px;
 }
 
-.ourfriends-arrow:hover{
-    background: #FDDCC4;
-    border-radius: 100px;
-    border-color: #FDDCC4;
-    cursor: pointer;
-    transition: all 0.5s linear;
-}
-
 .ourfriends-button {
     font-family: 'Georgia';
     font-style: normal;
@@ -472,13 +441,6 @@ img {
     border-radius: 100px;
     margin-bottom: 40px;
     padding: 15px 43px;
-}
-
-.ourfriends-button:hover {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    border: 1px solid #FDDCC4;
-    transition: all 0.5s linear; 
 }
 
 /* Ourfriends styles end */
@@ -576,12 +538,6 @@ img {
     margin-top: 5px;
 }
 
-.inaddition-card:hover {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    transition: all 0.5s linear;  
-}
-
 .inaddition-card__number {
     width: 275px;
     height: 23px;
@@ -662,12 +618,6 @@ img {
     text-decoration: none;
 }
 
-.footer-link:hover {
-    cursor: pointer;
-    color: #FAFAFA;
-    transition: all 0.5s linear; 
-}
-
 .footer-phone {
     margin-top: 8px;
 }
@@ -682,6 +632,60 @@ img {
 /* Footer styles end */
 
 /* Media start */
+
+@media (hover:hover) {
+
+    .header-item__link:hover {
+        color: #FAFAFA;
+        transition: all 0.5s linear; 
+    }
+
+    .notonly-content__button:hover {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        border: 1px solid #FDDCC4;
+        transition: all 0.5s linear; 
+    }
+
+    .ourfriends-card:hover {
+        background: #FFFFFF;
+        cursor: pointer;
+        transition: all 0.5s linear; 
+    }
+    
+    .ourfriends-card:hover .ourfriends-card__button {
+        background-color: #F1CDB3;
+        transition: all 0.5s linear; 
+    }
+
+    .ourfriends-arrow:hover{
+        background: #FDDCC4;
+        border-radius: 100px;
+        border-color: #FDDCC4;
+        cursor: pointer;
+        transition: all 0.5s linear;
+    }
+
+    .ourfriends-button:hover {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        border: 1px solid #FDDCC4;
+        transition: all 0.5s linear; 
+    }
+
+    .inaddition-card:hover {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        transition: all 0.5s linear;  
+    }
+
+    .footer-link:hover {
+        cursor: pointer;
+        color: #FAFAFA;
+        transition: all 0.5s linear; 
+    }
+    
+}
 
 @media screen and (min-width: 768px) and (max-width: 1279px)  {
     

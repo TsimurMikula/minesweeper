@@ -225,11 +225,6 @@ img {
     padding-bottom: 4px;
 }
 
-.header-item__link:hover {
-    color: #292929;
-    transition: all 0.5s linear; 
-}
-
 .header-item__link:active {
     border-bottom: 3px #F1CDB3 solid;
 }
@@ -300,17 +295,6 @@ img {
     letter-spacing: 0.06em;
 }
 
-.ourfriends-card:hover {
-    background: #FFFFFF;
-    cursor: pointer;
-    transition: all 0.5s linear; 
-}
-
-.ourfriends-card:hover .ourfriends-card__button {
-    background-color: #F1CDB3;
-    transition: all 0.5s linear; 
-}
-
 .ourfriends-card__name {
     font-weight: 400;
     font-size: 20px;
@@ -348,34 +332,18 @@ img {
     height: 52px;
 }
 
-.ourfriends-button:nth-last-child(-n + 3):hover {
-    background: #FDDCC4;
-    border-radius: 100px;
-    border-color: #FDDCC4;
-    cursor: pointer;
-    transition: all 0.5s linear; 
-}
-
 .ourfriends-button-current__hover {
     display: none;
 }
 
-.ourfriends-button-current:hover .ourfriends-button-current__hover {
-    display: block;
-    position: relative;
-    top: -59.5px;
-    animation: arrow 0.5s forwards;
-    cursor: pointer;
-}
-
-@keyframes arrow {
-    0% {
-        opacity: 0;
+ @keyframes arrow {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    100% {
-        opacity: 1;
-    }
-  }
 /* Ourfriends styles end */
 
 /* Footer styles start */
@@ -435,12 +403,6 @@ img {
     text-decoration: none;
 }
 
-.footer-link:hover {
-    cursor: pointer;
-    color: #FAFAFA;
-    transition: all 0.5s linear; 
-}
-
 .footer-phone {
     margin-top: 8px;
 }
@@ -455,6 +417,47 @@ img {
 /* Footer styles end */
 
 /* Media start */
+
+@media (hover:hover) {
+    
+    .header-item__link:hover {
+        color: #292929;
+        transition: all 0.5s linear; 
+    }
+
+    .ourfriends-card:hover {
+        background: #FFFFFF;
+        cursor: pointer;
+        transition: all 0.5s linear; 
+    }
+
+    .ourfriends-card:hover .ourfriends-card__button {
+        background-color: #F1CDB3;
+        transition: all 0.5s linear; 
+    }
+
+    .ourfriends-button:nth-last-child(-n + 3):hover {
+        background: #FDDCC4;
+        border-radius: 100px;
+        border-color: #FDDCC4;
+        cursor: pointer;
+        transition: all 0.5s linear; 
+    }
+
+    .ourfriends-button-current:hover .ourfriends-button-current__hover {
+        display: block;
+        position: relative;
+        top: -59.5px;
+        animation: arrow 0.5s forwards;
+        cursor: pointer;
+    }
+
+    .footer-link:hover {
+        cursor: pointer;
+        color: #FAFAFA;
+        transition: all 0.5s linear; 
+    }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
     
