@@ -459,10 +459,14 @@ img {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) and (max-width: 1010px) {
     
     .wrapper {
-        max-width: 708px;
+        min-width: 708px;
+    }
+
+    .header-wrapper {
+        padding: 0 20px;
     }
 
     .ourfriends-wrapper {
@@ -508,14 +512,14 @@ img {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.9px) {
     
     .wrapper {
-        max-width: 300px;
+        min-width: 300px;
     }
 
     .header-wrapper {
-        margin: 0 10px;
+        padding: 0 12px;
     }
 
     .header-burger {
@@ -556,6 +560,7 @@ img {
 
     .ourfriends-slider {
         justify-content: center;
+        gap: 29px;
         margin-bottom: 44px;
     }
     
@@ -576,6 +581,7 @@ img {
     .footer-wrapper {
         min-height: 809px;
         justify-content: center;
+        gap: 0 29px;
     }
 
     .footer-contacts {
