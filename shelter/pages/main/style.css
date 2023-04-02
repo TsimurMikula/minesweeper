@@ -148,16 +148,17 @@ img {
 /* Header styles start */
 .header {
     position: absolute;
+    width: 100%;
     height: 60px;
-    left: calc(50% - 1200px/2);
-    top: 30px;
+    left: 0;
+    top: 0;
+    padding: 30px 40px;
 }
 .header-wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    width: 1200px;
 }
 
 .header-logo {
@@ -234,8 +235,9 @@ img {
     width: 30px;
     height: 22px;
     top: -2px;
-    left: 0px;
+    right: 20px;
 }
+
 .header-burger__line {
     display: block;
     width: 100%;
@@ -243,15 +245,19 @@ img {
     position: absolute;
     left: 0;
 }
+
 .burger-line__first {
     top: 0;
 }
+
 .burger-line__second {
     top: 50%;
 }
+
 .burger-line__third {
     top: 100%;
 }
+
 /* Header styles end */
 
 /* Notonly styles start */
@@ -308,6 +314,7 @@ img {
 .notonly-img {
     margin-top: 172px;
 }
+
 /* Notonly styles end */
 
 /* About styles start */
@@ -346,6 +353,7 @@ img {
     color: #4C4C4C;
     margin-top: -2px;
 }
+
 /* About styles end */
 
 /* Ourfriends styles start */
@@ -356,7 +364,8 @@ img {
 .ourfriends-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     min-height: 877px;
 }
 
@@ -373,7 +382,7 @@ img {
 .ourfriends-slider {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -30px;
+    margin-top: 30px;
 }
 
 .ourfriends-card {
@@ -439,7 +448,7 @@ img {
     background-color: #F1CDB3;
     border: 1px solid #F1CDB3;
     border-radius: 100px;
-    margin-bottom: 40px;
+    margin-top: 60px;
     padding: 15px 43px;
 }
 
@@ -449,8 +458,9 @@ img {
 .help-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    height: 611px;
+    flex-direction: column;
+    align-items: center;
+    min-height: 611px;
 }
 
 .help-title {
@@ -464,12 +474,12 @@ img {
 }
 
 .help-content {
-    width: 1026px;
-    height: 281px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 68px;
+    width: 1026px;
+    height: 281px;
+    margin-top: 32px;
     gap: 38px 119px;
 }
 
@@ -483,6 +493,7 @@ img {
     line-height: 23px;
     letter-spacing: 0.06em;
 }
+
 /* Help styles end */
 
 /* Inaddition styles start */
@@ -559,6 +570,7 @@ img {
     color: #B2B2B2;
     margin-top: 20px;
 }
+
 /* Inaddition styles end */
 
 /* Footer styles start */
@@ -576,12 +588,14 @@ img {
 }
 
 .footer-contacts {
-    max-width: 280px;
+    width: 280px;
+    height: 234px;
     margin-top: 28px;
 }
 
 .footer-locations {
-    max-width: 302px;
+    width: 302px;
+    height: 234px;
     margin-top: 28px;
 }
 
@@ -627,12 +641,13 @@ img {
 }
 
 .footer-img {
+    max-height: 320px;
     margin-top: 40px;
 }
+
 /* Footer styles end */
 
 /* Media start */
-
 @media (hover:hover) {
 
     .header-item__link:hover {
@@ -687,18 +702,14 @@ img {
     
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px)  {
+@media screen and (min-width: 768px) and (max-width: 1279.9px)  {
     
     .wrapper {
-        max-width: 708px;
+        min-width: 708px;
     }
 
     .header {
-        left: calc(50% - 708px/2);
-    }
-
-    .header-wrapper {
-        max-width: 708px;
+        padding: 30px 30px;
     }
 
     .notonly {
@@ -714,8 +725,19 @@ img {
     }
 
     .notonly-content {
+        align-items: flex-start;
+        padding: 0 146px;
         margin-top: 108px;
         margin-bottom: 100px;
+    }
+
+    .notonly-content__title {
+        max-width: 100%;
+        padding-right: 60px;
+    }
+
+    .notonly-content__subtitle {
+        max-width: 100%;
     }
 
     .notonly-content__button {
@@ -737,8 +759,13 @@ img {
     }
 
     .about-content {
+        padding: 0 160px;
         margin-top: -45px;
         margin-bottom: 65px;
+    }
+
+    .about-content__subtitle {
+        max-width: 100%;
     }
 
     .about-img {
@@ -751,7 +778,9 @@ img {
     }
 
     .ourfriends-slider {
+        min-width: 100%;
         justify-content: space-between;
+        padding: 0 22px;
         margin-bottom: 0px;
     }
 
@@ -775,11 +804,11 @@ img {
     }
 
     .help-content {
-        max-width: 630px;
-        max-height: 449px;
+        max-width: 100%;
+        min-height: 449px;
         justify-content: space-between;
-        margin-bottom: 239px;
         gap: 56px 0px;
+        padding: 0 60px;
     }
 
     .help-item {
@@ -795,13 +824,23 @@ img {
     }
 
     .inaddition-img {
-        margin-top: 90px;
+        margin-top: 46px;
     }
     
     .inaddition-content {
-        max-width: 380px;
-        height: 282px;
-        margin-top: -46px;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 186px;
+        height: 325px;
+        margin-top: -44px;
+    }
+
+    .inaddition-title {
+        max-width: 300px;
+    }
+
+    .inaddition-description {
+        max-width: 100%;
     }
 
     .footer {
@@ -811,20 +850,31 @@ img {
     }
 
     .footer-wrapper {
-        min-height: 639px;
+        height: 639px;
         justify-content: center;
-        gap: 0 60px;
+        gap: 0 40px;
+        padding: 0 46px;
     }
 
     .footer-img {
-        margin-top: 50px;
+        margin-top: 95px;
     }
 
     .footer-contacts {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 45%;
         margin-top: 0;
     }
     
     .footer-locations {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 45%;
         margin-top: 0;
     }
 }
@@ -832,15 +882,11 @@ img {
 @media screen and (max-width: 767.9px) {
     
     .wrapper {
-        max-width: 300px;
+        min-width: 300px;
     }
 
     .header {
-        left: calc(50% - 280px/2);
-    }    
-
-    .header-wrapper {
-        max-width: 280px;
+        padding: 30px 20px;
     }
 
     .header-burger {
@@ -883,12 +929,16 @@ img {
     }
 
     .notonly-content__title {
-        max-width: 200px;
+        max-width: 100%;
         font-size: 25px;
         line-height: 32px;
         letter-spacing: 0.06em;
+        padding: 0 30px;
     }
-    
+
+    .notonly-content__subtitle {
+        max-width: 100%;
+    }
     
     .notonly-content__button {
         padding: 15px 44px;
@@ -915,16 +965,18 @@ img {
     }
 
     .about-content__title {
-        max-width: 220px;
+        max-width: 100%;
         font-size: 25px;
         line-height: 32px;
         text-align: center;
+        padding: 0 30px;
         margin-top: 0px;
     }
     
     .about-content__subtitle {
-        max-width: 270px;
+        max-width: 100%;
         text-align: justify;
+        padding: 0 16px;
         margin-top: 0px;
     }
 
@@ -949,25 +1001,29 @@ img {
     .ourfriends-slider {
         justify-content: center;
         gap: 0 80px;
-        margin-top: -24px;
-        margin-bottom: 18px;
+        margin-top: 20px;
     }
 
     .ourfriends-card {
         order: -1;
-        margin-right: 50px;
+        margin-right: 0px;
     }
 
     .ourfriends-card:nth-last-child(-n+3) {
         display: none;
     }
+    
+    .ourfriends-card:nth-last-child(4) {
+        margin-left: 0px;
+    }
 
     .ourfriends-arrow {
-        margin-top: 0px;        
+        margin-top: 20px;
+                
     }
 
     .ourfriends-button {
-        margin-bottom: 0px;
+        margin-top: 40px;
     }
 
     .help-wrapper {
@@ -982,11 +1038,12 @@ img {
     }
 
     .help-content {
-        max-width: 290px;
-        max-height: 555px;
+        max-width: 100%;
+        min-height: 555px;
         justify-content: flex-start;
-        margin-bottom: 294px;
+        margin-top: 22px;
         gap: 30px 30px;
+        padding: 0 7px;
     }
 
     .help-item {
@@ -1018,7 +1075,7 @@ img {
     
     .inaddition-content {
         justify-content: center;
-        max-width: 300px;
+        min-width: 300px;
         margin-top: -20px;
     }
 
@@ -1051,8 +1108,9 @@ img {
     }
 
     .inaddition-description {
-        max-width: 280px;
-        text-align:justify;
+        max-width: 100%;
+        text-align: justify;
+        padding: 0 10px;
         margin-top: 20px;
     }
 
@@ -1063,7 +1121,7 @@ img {
     }
     
     .footer-wrapper {
-        min-height: 809px;
+        height: 809px;
         justify-content: center;
     }
 
@@ -1085,7 +1143,7 @@ img {
         flex-direction: column;
         align-items: center;
         max-width: 300px;
-        margin-top: 4px;
+        margin-top: -8px;
     }
     
     .footer-title-2 {
@@ -1104,7 +1162,7 @@ img {
     .footer-img {
         width: 260px;
         height: 269px;
-        margin-top: 26px;
+        margin-top: 50px;
     }
 }
 
