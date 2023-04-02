@@ -399,6 +399,7 @@ img {
 .ourfriends-card:nth-last-child(-n+2) {
     margin-right: 53px;
 }
+
 .ourfriends-card:nth-last-child(4) {
     margin-left: 53px;
 }

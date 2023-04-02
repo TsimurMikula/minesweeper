@@ -332,6 +332,14 @@ img {
     height: 52px;
 }
 
+.ourfriends-button:nth-last-child(-n + 3):hover {
+    background: #FDDCC4;
+    border-radius: 100px;
+    border-color: #FDDCC4;
+    cursor: pointer;
+    transition: all 0.5s linear; 
+}
+
 .ourfriends-button-current__hover {
     display: none;
 }
