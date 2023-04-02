@@ -229,33 +229,8 @@ img {
     border-bottom: 3px #F1CDB3 solid;
 }
 
-.header-burger {
-    position: relative;
+.burger {
     display: none;
-    width: 30px;
-    height: 22px;
-    top: -2px;
-    right: 20px;
-}
-
-.header-burger__line {
-    display: block;
-    width: 100%;
-    border: 1.6px solid #F1CDB3;
-    position: absolute;
-    left: 0;
-}
-
-.burger-line__first {
-    top: 0;
-}
-
-.burger-line__second {
-    top: 50%;
-}
-
-.burger-line__third {
-    top: 100%;
 }
 
 /* Header styles end */
@@ -881,34 +856,78 @@ img {
 }
 
 @media screen and (max-width: 767.9px) {
+
+    .body-no-scroll {
+        overflow: hidden;
+    }
     
     .wrapper {
-        min-width: 300px;
+        min-width: 280px;
     }
 
     .header {
         padding: 30px 20px;
     }
 
-    .header-burger {
-        display: block;   
-    } 
+    .burger {
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        height: 22px;
+        z-index: 11;
+        transition: .3s all linear;
+    }
+    
+    .burger__line {
+        border: 1.6px solid #F1CDB3;
+    }
+    
+    .burger__line_second {
+       margin-top: 7px;
+    }
+    
+    .burger__line_third {
+        margin-top: 7px;
+    }
 
     .header-nav {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 320px;
         height: 100%;
         position: fixed;
         top: 0;
-        left: 0;
-        background-color: #EDF2EC;
+        right: 0;
+        background-color: #292929;
         z-index: 10;
-        padding: 75px;
-        -webkit-transform: translateX(100%);
-            -ms-transform: translateX(100%);
-                transform: translateX(100%);
-        -webkit-transition: .2s all linear;
-        -o-transition: .2s all linear;
-        transition: .2s all linear;
+        transform: translateX(100%);
+        transition: .3s all linear;
+    }
+
+    .header-nav-active {
+        transform: translateX(0);
+    }
+
+    .header-item {
+        width: 243px;
+        text-align: center;
+        margin-bottom: 35px;    
+    }
+
+    .header-item__link {
+        font-size: 32px;
+        line-height: 51px;
+    }
+
+    .burger-active {
+        transform: rotate(90deg);
+    }
+
+    .blackOut-effect {
+        filter: brightness(50%);
+        z-index: 9;
     }
     
     .notonly {
@@ -916,6 +935,7 @@ img {
         background: url(./assets/img/start-screen-gradient-background-mobile.jpg) no-repeat center;
         background-size: cover;
     }
+    
 
     .notonly-wrapper {
         flex-direction: column;
