@@ -38,6 +38,26 @@ console.log('1. Вёрстка страницы Main соответствует 
 
 //Burger menu end
 
+//Slider start
 
+(function () {
+    const btn_left = document.querySelector('.arrow-left');
+    const btn_right = document.querySelector('.arrow-right');
+    const slider = document.querySelector('.slider');
+
+
+    btn_left.addEventListener('click', () => {
+        slider.classList.add('slider-anim-left');
+    });
+
+    btn_right.addEventListener('click', () => {
+        slider.classList.add('slider-anim-right');
+    });
+
+    
+
+}());
+
+//Slider end
 
 
