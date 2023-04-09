@@ -1,7 +1,7 @@
 [
     {
       "name": "Jennifer",
-      "id": "Jennifer",
+      "id": "jennifer",
       "img": "./assets/img/jennifer.png",
       "imgPopup": "./assets/img/modal/jennifer.png",
       "type": "Dog",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Sophia",
-      "id": "Sophia",
+      "id": "sophia",
       "img": "./assets/img/sophia.png",
       "imgPopup": "./assets/img/modal/sophia.png",
       "type": "Dog",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Woody",
-      "id": "Woody",
+      "id": "woody",
       "img": "./assets/img/woody.png",
       "imgPopup": "./assets/img/modal/woody.png",
       "type": "Dog",
@@ -40,7 +40,7 @@
     },
     {
       "name": "Scarlett",
-      "id": "Scarlett",
+      "id": "scarlett",
       "img": "./assets/img/scarlett.png",
       "imgPopup": "./assets/img/modal/scarlett.png",
       "type": "Dog",
@@ -53,7 +53,7 @@
     },
     {
       "name": "Katrine",
-      "id": "Katrine",
+      "id": "katrine",
       "img": "./assets/img/katrine.png",
       "imgPopup": "./assets/img/modal/katrine.png",
       "type": "Cat",
@@ -66,7 +66,7 @@
     },
     {
       "name": "Timmy",
-      "id": "Timmy",
+      "id": "timmy",
       "img": "./assets/img/timmy.png",
       "imgPopup": "./assets/img/modal/timmy.png",
       "type": "Cat",
@@ -79,7 +79,7 @@
     },
     {
       "name": "Freddie",
-      "id": "Freddie",
+      "id": "freddie",
       "img": "./assets/img/freddie.png",
       "imgPopup": "./assets/img/modal/freddie.png",
       "type": "Cat",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Charly",
-      "id": "Charly",
+      "id": "charly",
       "img": "./assets/img/charly.png",
       "imgPopup": "./assets/img/modal/charly.png",
       "type": "Dog",
