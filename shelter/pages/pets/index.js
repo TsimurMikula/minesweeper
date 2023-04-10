@@ -23,6 +23,7 @@ console.log('1. Вёрстка страницы Main соответствует 
             menu.classList.remove('header-nav-active');
             burger.classList.toggle('burger-active');
             blackOut.forEach(e => e.classList.remove('blackOut-effect'));
+            headerBlackOut.classList.remove('header-blackOut');
             noScroll.classList.remove('body-no-scroll');
         });    
     }
@@ -31,7 +32,8 @@ console.log('1. Вёрстка страницы Main соответствует 
         if (menu.classList.contains('header-nav-active') && !burger.contains(e.target)  && !menu.contains(e.target)) {
             menu.classList.remove('header-nav-active');
             burger.classList.toggle('burger-active');
-            effectNO.forEach(e => e.classList.remove('notonly-effect'));
+            blackOut.forEach(e => e.classList.remove('blackOut-effect'));
+            headerBlackOut.classList.remove('header-blackOut');
             noScroll.classList.remove('body-no-scroll');
         }
     });
