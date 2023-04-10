@@ -34,16 +34,12 @@
               <a href="#contacts" class="header-item__link">Contacts</a>
             </li>
           </ul>
-          <div class="header-close">
-            <span class="header-close__line"></span>
-            <span class="header-close__line"></span>
-          </div>
         </nav>
-        <div class="header-burger burger-line">
-          <span class="header-burger__line burger-line__first"></span>
-          <span class="header-burger__line burger-line__second"></span>
-          <span class="header-burger__line burger-line__third"></span>
-      </div>   
+        <div class="burger">
+          <div class="burger__line burger__line_first"></div>
+          <div class="burger__line burger__line_second"></div>
+          <div class="burger__line burger__line_third"></div>
+        </div>  
       </div>
     </div>    
   </header>
@@ -163,9 +159,23 @@
       </div>
     </div>
   </footer>
-  <!--Footer end--> 
+  <!--Footer end-->
+  
+  <!--Popup start-->
+ <div class="popup-overlay">
+  <div class="wrapper">
+    <div class="popup-wrapper">
+      <div class="popup-close">
+        <img src="./assets/img/svg/modal_close_button.svg" alt="close" class="popup-close__img">
+      </div>
+      <div id="x" class="popup-content">
+      </div>
+    </div>
+  </div>
+</div>
+<!--Popup end-->
 
-  <script src="./index.js"></script>  
+  <script src="./index.js" type="module"></script>  
 
 </body>
 </html>
