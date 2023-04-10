@@ -1011,6 +1011,10 @@ img {
 
 @media screen and (max-width: 767.9px) {
     
+    .body-no-scroll {
+        overflow: hidden;
+    }
+    
     .wrapper {
         min-width: 280px;
     }
