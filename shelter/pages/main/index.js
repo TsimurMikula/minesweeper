@@ -90,7 +90,7 @@ import sliderCards from "./main.json" assert { type: "json" };
     const cardName = document.createElement('h3');
     cardName.classList.add('ourfriends-card__name');
     cardName.innerText = sliderCards[randomCards[i][j]]['name'];
-    card.setAttribute('data-card', sliderCards[randomCards[i][j]]['id']);
+    card.classList.add(`${sliderCards[randomCards[i][j]]['name']}`);
     card.append(cardName);
 
     const cardBtn = document.createElement('button');
@@ -150,27 +150,66 @@ import sliderCards from "./main.json" assert { type: "json" };
 //Slider end
 
 //Popup start
+
 (function () {
+  const overlay = document.querySelector('.popup-overlay');
+  const popupClose = document.querySelector('.popup-close');
+  const slider = document.querySelector('.slider-wrapper');
+  const noScroll = document.querySelector('body');
 
-  const cards = document.querySelectorAll('.ourfriends-card');
-  const popupCards = document.querySelector('.popup-cards');
-  const contents = document.querySelectorAll('.popup-content');
-
-  cards.forEach(card => {
-    card.addEventListener('click', (e) => {
-      let cardId = e.currentTarget.getAttribute('data-card');
-      document.querySelector(`[data-popup = "${cardId}"]`).classList.add('popup-active');
-
-    })
+  slider.addEventListener('click', (e) => {
+    let currCard = e.target.closest('.ourfriends-card');
+    let cardAttr = currCard.classList[1];
+      if (e.target.closest('.ourfriends-card')) {
+        overlay.classList.add('popup-overlay__active');
+        noScroll.classList.toggle('body-no-scroll');
+        createPopup(cardAttr);
+        console.log(cardAttr)
+    }
   })
   
-  contents.forEach(content => {
-    content.addEventListener('click', (e) => {
+  function createPopup(cardAttr) {
+    for (let i = 0; i < sliderCards.length; i++) {
+      if (sliderCards[i].name === cardAttr) {
+       x.insertAdjacentHTML('afterbegin', `
+              <div class="content-img">
+                <img src="${sliderCards[i].imgPopup}" alt="pets" class="content-img__img">
+              </div>
+              <div class="content-description">
+                <h3 class="content-description__title">${sliderCards[i].name}</h3>
+                <p class="content-description__subtitle">${sliderCards[i].type + '-' + sliderCards[i].breed}</p>
+                <p class="content-description__description">${sliderCards[i].description}</p>
+                <div class="content-description__age">
+                  <img src="./assets/img/svg/dot.svg" alt="dot" class="description__img">
+                  <b>Age:</b> <span class="description-age">${sliderCards[i].age}</span>
+                </div>
+                <div class="content-description__inoculations">
+                  <img src="./assets/img/svg/dot.svg" alt="dot" class="description__img">
+                  <b>Inoculations:</b> <span class="description-inoculations">${sliderCards[i].inoculations[0]}</span>
+                </div>
+                <div class="content-description__diseases">
+                  <img src="./assets/img/svg/dot.svg" alt="dot" class="description__img">
+                  <b>Diseases:</b> <span class="description-diseases">${sliderCards[i].diseases[0]}</span>
+                </div>
+                <div class="content-description__parasites">
+                  <img src="./assets/img/svg/dot.svg" alt="dot" class="description__img">
+                  <b>Parasites:</b> <span class="description-parasites">${sliderCards[i].parasites[0]}</span>
+                </div>
+              </div>
+      `);
+      }
+    }
+  }
+  
+  overlay.addEventListener('click', (e) => {
+    if (e.target.classList.contains('popup-overlay')) {
+      overlay.classList.remove('popup-overlay__active');
+    }
+  });
 
-      document.querySelector(`[data-popup = "${cardId}"]`).classList.remove('popup-active');
-
-  })
-})
+  popupClose.addEventListener('click', () => {
+    overlay.classList.remove('popup-overlay__active');
+  });
 
 }());
 //Popup end
