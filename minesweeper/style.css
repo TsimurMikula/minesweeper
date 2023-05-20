@@ -1,0 +1,33 @@
+body {
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #b7e0e6;
+}
+
+.header {
+  margin: 2em auto;
+  width: 12.5rem;
+  font-size: 2em;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  height: 3em;
+  font-size: 1em;
+}
+
+.panel__new-game, .panel__timer-game, .panel__click-count {
+  width: 6rem;
+  text-align: center;
+  padding: 1rem 0;
+  border: thick double #aadcf3;
+  background: #259fb5;
+}
+
+.panel__new-game:hover {
+  cursor: pointer;
+  color: bisque;
+  background: #1cb7d2;
+}
+
