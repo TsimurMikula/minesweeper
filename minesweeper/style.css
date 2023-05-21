@@ -20,9 +20,13 @@ body {
 .panel__new-game, .panel__timer-game, .panel__click-count {
   width: 6rem;
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.6rem 0 0 0;
   border: thick double #aadcf3;
   background: #259fb5;
+}
+
+.panel__new-game {
+  padding: 0;
 }
 
 .panel__new-game:hover {
@@ -30,4 +34,42 @@ body {
   color: bisque;
   background: #1cb7d2;
 }
+
+.wrap {
+  max-width: 18.75rem;
+  margin: 0 auto;
+}
+
+.minesweeper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(10, 10%);
+  justify-content: center;
+}
+
+.minesweeper__btnBox {
+  height: 1.875rem;
+}
+
+.minesweeper__btnBox_one-blue {
+  color: blue;
+  font-weight: bold;
+}
+
+.minesweeper__btnBox_two-green {
+  color: green;
+  font-weight: bold;
+}
+
+.minesweeper__btnBox_three-red {
+  color: red;
+  font-weight: bold;
+}
+
+.minesweeper__btnBox_four-brown {
+  color: rgb(198, 150, 36);
+  font-weight: bold;
+}
+
+
 
