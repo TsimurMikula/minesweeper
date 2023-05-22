@@ -5,18 +5,31 @@ function createElement(tagName, className) {
 }
 
 const header = createElement('header', 'header');
-header.textContent = 'Minesweeper';
+header.textContent = 'Minesweeper 10x10';
 document.body.append(header);
 
+const wrapP = createElement('div', 'wrap-panel');
 const panel = createElement('div', 'panel');
 const newGame = createElement('button', 'panel__new-game');
 newGame.textContent = 'New game';
 panel.append(newGame);
 const timerGame = createElement('div', 'panel__timer-game');
+timerGame.textContent = `Time: 0s`;
 panel.append(timerGame);
+const soundToggle = createElement('button', 'panel__sound-toggle');
+soundToggle.textContent = '🔊';
+panel.append(soundToggle);
 const clickCount = createElement('div', 'panel__click-count');
+clickCount.textContent = `Click: 0`;
 panel.append(clickCount);
-document.body.append(panel);
+const mineRemains = createElement('div', 'panel__mine-remains');
+mineRemains.textContent = `Mine: 10`;
+panel.append(mineRemains);
+const flagCount = createElement('div', 'panel__flag-count');
+flagCount.textContent = `Flag: 0`;
+panel.append(flagCount);
+wrapP.append(panel);
+document.body.append(wrapP);
 
 const audioClick = createElement('audio', 'audio-click');
 audioClick.preload = 'auto';
@@ -26,9 +39,14 @@ const audioMine = createElement('audio', 'audio-mine');
 audioMine.preload = 'auto';
 audioMine.src = './assets/audio/370b925a30aca01.mp3'
 document.body.append(audioMine);
+const audioWin = createElement('audio', 'audio-win');
+audioWin.preload = 'auto';
+audioWin.src = './assets/audio/success-fanfare-trumpets-6185.mp3'
+document.body.append(audioWin);
 
 const soundClick = document.querySelector('.audio-click');
 const soundMine = document.querySelector('.audio-mine');
+const soundWin = document.querySelector('.audio-win');
 
 const nG = document.querySelector('.panel__new-game');
   nG.addEventListener('click',  () => {
@@ -37,8 +55,19 @@ const nG = document.querySelector('.panel__new-game');
     } 
     start(10, 10, 10);
   });
+let soundGame = true;
 
-const wrap = createElement('div', 'wrap');
+const sT = document.querySelector('.panel__sound-toggle');
+  sT.addEventListener('click',  () => {
+    soundGame = !soundGame;
+    if (soundGame) {
+      soundToggle.textContent = '🔊';
+    } else {
+      soundToggle.textContent = '🔈';
+    }
+  });
+
+const wrapMn = createElement('div', 'wrap-minesweeper');
 const minesweeper = createElement('div', 'minesweeper');
 
 function start(w, h, mine) {
@@ -46,54 +75,61 @@ function start(w, h, mine) {
     const btnBox = createElement('button', 'minesweeper__btnBox');
     minesweeper.append(btnBox);
   }
-  wrap.append(minesweeper);
-  document.body.append(wrap);
+  wrapMn.append(minesweeper);
+  document.body.append(wrapMn);
 
   const ms = document.querySelector('.minesweeper');
   const msGrid = [...ms.children];
   
   let countCell = w*h;
   let n = 0;
- 
+  let t = 0;
+  let f = 0;
+  const cellsFlag = [];
+
   const arr = [];
   for (let i = 0; i < w*h; i++) {
     arr.push(i);
   }
   const posMine = arr.sort(() => Math.random() - 0.5).slice(0, mine);
-  console.log(posMine);
-  
-  let t = 0;
 
   const btnBoxAll = document.querySelectorAll('.minesweeper__btnBox');
   btnBoxAll.forEach(btnBox => btnBox.addEventListener('click',  time));
     
   function time() {
     let timer = setInterval(() => {
-        t++;
-        timerGame.textContent = `Time: ${t}s`;
+      t++;
+      timerGame.textContent = `Time: ${t}s`;
     }, 1000);
     nG.addEventListener('click',  () => clearInterval(timer));
     btnBoxAll.forEach(btnBox => btnBox.removeEventListener('click',  time)); 
     return t;
   }
 
-  let f = 0;
-  
   ms.addEventListener('contextmenu',  (e) => {
     e.preventDefault();
     if (!e.target.closest('button')) return;
-    soundClickPlay();
+    if (soundToggle.textContent == '🔊') soundClickPlay();
     n++;
     f++;
-    if (f == 10) e.target.textContent = ' ';
-    clickCount.textContent = `${n}`;
+    let mine = 10 - f;
+    clickCount.textContent = `Click: ${n}`;
+    mineRemains.textContent = `Mine: ${mine}`;
+    flagCount.textContent = `Flag: ${f}`;
+
+    if (e.target.dataset.flag === 'flag' && e.target.textContent == '🚩') {
+      e.target.disabled = false;
+      e.target.textContent = ' ';
+      flagCount.textContent = `Flag: ${f=f-1}`;
+    }
     e.target.textContent = '🚩';
+    e.target.dataset.flag = 'flag'
     e.target.disabled = true;
   });
 
   ms.addEventListener('click',  (e) => {
     if (!e.target.closest('button')) return;
-    soundClickPlay();
+    if (soundToggle.textContent == '🔊') soundClickPlay();
     const index = msGrid.indexOf(e.target);
     const column = index % w;
     const row = (index - column) / w;
@@ -111,10 +147,13 @@ function start(w, h, mine) {
     if (msCell.disabled == true) return;
     msCell.disabled = true;
     countCell--;
-    if (countCell == mine) setTimeout(() => alert(`Ура! Вы нашли все мины за ${time()} секунд и ${n} ходов!`), 1000);
+    if (countCell == mine) setTimeout(() => {
+      if (soundToggle.textContent == '🔊') soundWinPlay();
+      alert(`Ура! Вы нашли все мины за ${time()} секунд и ${n} ходов!`)
+    }, 1000);
     if (isMne(row, column) && n == 1) {
-      soundClickPlay();
       msCell.textContent = countNearbyMine(row, column);
+      if (soundToggle.textContent == '🔊') soundClickPlay();
       if (countNearbyMine(row, column) == 1 || countNearbyMine(row, column) == 5) msGrid[index].classList.add('minesweeper__btnBox_one-blue');
       if (countNearbyMine(row, column) == 2 || countNearbyMine(row, column) == 6) msGrid[index].classList.add('minesweeper__btnBox_two-green');
       if (countNearbyMine(row, column) == 3 || countNearbyMine(row, column) == 7) msGrid[index].classList.add('minesweeper__btnBox_three-red');
@@ -122,8 +161,8 @@ function start(w, h, mine) {
       return;
     }
     if (isMne(row, column)) {
-      soundClickStop();
-      soundMinePlay();
+      soundClickStop()
+      if (soundToggle.textContent == '🔊') soundMinePlay();
       msCell.textContent = '💥';
       setTimeout(() => alert('Игра окончена. Попробуйте еще раз'), 1000);
       return;
@@ -167,13 +206,17 @@ function start(w, h, mine) {
   function soundClickPlay() {
     soundClick.play();
   }
-  
+
   function soundClickStop() {
     soundClick.pause();
   }
 
   function soundMinePlay() {
     soundMine.play();
+  }
+
+  function soundWinPlay() {
+    soundWin.play();
   }
 }
 start(10, 10, 10);

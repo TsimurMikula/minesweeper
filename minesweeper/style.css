@@ -6,27 +6,50 @@ body {
 
 .header {
   margin: 2em auto;
-  width: 12.5rem;
+  width: 16.5rem;
   font-size: 2em;
+  text-align: center;
+}
+
+.wrap-panel {
+  max-width: 18.75rem;
+  margin: 0 auto;
 }
 
 .panel {
-  display: flex;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 33.4%);
   justify-content: center;
-  height: 3em;
-  font-size: 1em;
+  height: 6rem;
+  font-size: 1rem;
 }
 
-.panel__new-game, .panel__timer-game, .panel__click-count {
-  width: 6rem;
+.panel__new-game, 
+.panel__sound-toggle, 
+.panel__timer-game, 
+.panel__click-count, 
+.panel__mine-remains, 
+.panel__flag-count {
+  width: 5.8rem;
+  height: 1.8rem;
   text-align: center;
   padding: 0.6rem 0 0 0;
   border: thick double #aadcf3;
   background: #259fb5;
 }
 
-.panel__new-game {
+.panel__new-game, 
+.panel__sound-toggle {
+  height: 3rem;
   padding: 0;
+  margin-left: 0 0.5rem;
+  color: bisque;
+  background: #272626;
+}
+
+.panel__sound-toggle {
+margin-left: 0.5rem;
 }
 
 .panel__new-game:hover {
@@ -35,7 +58,12 @@ body {
   background: #1cb7d2;
 }
 
-.wrap {
+.panel__sound-toggle:hover {
+  cursor: pointer;
+  background: #284dd1;
+}
+
+.wrap-minesweeper {
   max-width: 18.75rem;
   margin: 0 auto;
 }
