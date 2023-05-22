@@ -1,7 +1,8 @@
-1. Self-introduction (video): 
+### Self-introduction (video): 
 https://youtu.be/-GO8gjj7TH4
 
-2. Self-introduction (text):
+---
+### Self-introduction (text):
 Hello. My name is Timur. I live in the Republic of Belarus in the city of Nesvizh. My city is as small as my current factory salary.
 At the moment I'm studying and I want to become a front-end developer. By the way, I'm going to study all my life, because if we don't learn, we don't develop. 
 
