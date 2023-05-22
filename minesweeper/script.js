@@ -120,7 +120,8 @@ function start(w, h, mine) {
     if (e.target.dataset.flag === 'flag' && e.target.textContent == '🚩') {
       e.target.disabled = false;
       e.target.textContent = ' ';
-      flagCount.textContent = `Flag: ${f=f-1}`;
+      flagCount.textContent = `Flag: ${f = f-1}`;
+      mineRemains.textContent = `Mine: ${mine = mine+1}`;
     }
     e.target.textContent = '🚩';
     e.target.dataset.flag = 'flag'
